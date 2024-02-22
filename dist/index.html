@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<script src="bundle.js" defer></script>
+<link rel="stylesheet" href="./static/main.css">
+<title>Task Manager</title>
+</head>
+<body>
+    
+    <form id="taskForm" class="rounded shadow m-5 p-5" style="width: 800px;">
+        <h1>Add a Task</h1>
+        <label for="taskName" class="form-label">Task Name: </label><br>
+        <input type="text" class="form-control" id="taskName" name="taskName" required><br>
+        
+        <label for="description" class="form-label" >Description:</label><br>
+        <textarea name="description" id="description" rows="4" class="form-control" required></textarea><br>
+        
+        <label for="deadline">Deadline:</label>
+        <input type="date" id="deadline" name="deadline" required><br>
+        
+        <label for="category">Category:</label><br>
+        <select name="category" id="category" class="mb-3" required>
+            <option value="health">Health</option>
+            <option value="personal">Personal</option>
+            <option value="finance">Finance</option>
+            <option value="home">Home</option>
+            <option value="work">Work</option>
+            <option value="other">Other</option>
+        </select><br>
+        
+        <button class="btn btn-secondary" type="submit">Add Task</button>
+        
+    </form>
+    
+    <!-- Area to display our Tasks -->
+    <h1>Task List</h1>
+    <div id="taskList">
+        <ul id="tasks"></ul>
+    </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+</html>
